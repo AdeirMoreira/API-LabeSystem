@@ -8,9 +8,8 @@ export default async function getDataTurma(req:Request, res:Response) {
     
     try {
         if(!id){
-             errorCode = 422
-             throw new Error("Informe o id da turma!");
-             
+            errorCode = 422
+            throw new Error("Informe o id da turma!");
         }
         const TurmaIdDB = new TurmaDataBase()
         const result = await TurmaIdDB.getDataTurma(id) 
