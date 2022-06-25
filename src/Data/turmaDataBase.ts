@@ -28,9 +28,9 @@ export default class TurmaDataBase extends BaseDataBase {
             modulo:turma.getModulo()
         })
         } catch (error:any) {
-        console.log({data:{message:error.sqlMessage}})
-        throw new Error('Erro no banco de dados')
-       } 
+            console.log({data:{message:error.sqlMessage}})
+            throw new Error('Erro no banco de dados')
+        } 
     }
 
     public changeTurma = async (id:string, modulo:number) =>{
@@ -52,20 +52,12 @@ export default class TurmaDataBase extends BaseDataBase {
     public getDataTurma = async (id:string) =>{
         
         try {
-            const estudantes = await BaseDataBase.connection('turma') 
-            .select('*')         
-            .join('estudante','estudante.turma_id','=','turma.id')  
-            .where("turma.id",id)   
-                   
-                    
-            const professores = await BaseDataBase.connection('turma')
-            .select('*')
+            return await BaseDataBase.connection('turma') 
+            .select('turma.nome as turma','estudante.nome as estudante', 'estudante.id as estudanteID', 
+            'docente.nome as professor', 'docente.id as docenteID')         
+            .join('estudante','estudante.turma_id','=','turma.id')
             .join('docente','docente.turma_id','=','turma.id')
-            .where("turma.id",id)
-           
-             
-            return estudantes.concat(professores)
-            
+            .where("turma.id",id)   
         } catch (error:any) {
             console.log({data:{message:error.sqlMessage}})
             throw new Error("Erro no banco de dados!");

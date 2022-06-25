@@ -5,13 +5,6 @@ export abstract class Usuario {
         ) {}
 }
 
-export  class teste {
-    teste:string = ''
-    teste2:string = 'asdv'
-    constructor(){
-    }
-}
-
 export enum EspecificidadesEnum  {
     JS = 'JS',
     CSS = 'CSS',
@@ -43,17 +36,22 @@ export type hobby = {
     nome: string
 }
 
+export type Estudante_Hobby = {
+    id: string,
+    estudante_id : string,
+    hobby_id : string
+}
+
 export type Especialidade = {
     id:string,
     // nome:EspecificidadesEnum VER ISSO DEPOIS
     nome: string
 }
-export interface Especialidades  {
-    especialidades: Especialidade[]
-}
 
-export interface Hobbys {
-    hobbys: hobby[]
+export type Docente_Especialidade = {
+    id: string,
+    docente_id : string,
+    especialidade_id : string
 }
 
 export type Teacher = {
@@ -63,10 +61,18 @@ export type Teacher = {
     data_nasc: string,
     turma_id: string
 }
-  
+
 export type Turma= {
     id:string,
     nome:string,
     modulo:number
 
+}
+
+export interface Especialidades  {
+    especialidades: Especialidade[]
+}
+
+export interface Hobbys {
+    hobbys: hobby[]
 }

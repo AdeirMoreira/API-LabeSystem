@@ -1,4 +1,3 @@
-
 ### Pegar todos os estudantes
 GET http://localhost:3003/estudantes
 
@@ -18,10 +17,10 @@ POST  http://localhost:3003/estudantes
 Content-Type: application/json
 
 {
-    "nome": "Victor Papa",
-    "email": "victorpapa@devFront-end.com",
+    "nome": "Jose2",
+    "email": "josey2@email.com",
     "data_nasc": "20/06/2003",
-    "hobbys": ["dormir","comer cucuz","jogar valorant", "Dar carteirasso em blitz"]
+    "hobbys": ["teste1","teste2","teste3"]
 }
 
 ### Buscar estudante pelo nome
@@ -41,9 +40,9 @@ POST http://localhost:3003/docentes
 Content-Type: application/json
 
 {  
-    "nome": "murilão da massa",
-    "email": "murilão@labenu.com",
-    "data_nasc": "20/05/1991",
+    "nome": "janayla",
+    "email": "jana@labenu.com",
+    "data_nasc": "18/10/2022",
     "especialidades": ["js","css","react"]
 
 }
