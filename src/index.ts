@@ -1,44 +1,35 @@
 import { app } from "./app";
-import changeTeacherClass from "./EndPoints/changeTeacherClass";
-import createStudent from "./EndPoints/createStudents";
-import createTeacher from "./EndPoints/createTeacher";
-import getAllTeachers from "./EndPoints/getAllTeachers";
-import getAllStudents  from "./EndPoints/getAllStudents";
-import searchStudent from "./EndPoints/searchStudent";
-import studentChangeClass from "./EndPoints/studentChangeClass";
-import getAllClass from "./EndPoints/getAllClass";
-import getActiveClass from "./EndPoints/getActiveClass";
-import getClassData from "./EndPoints/getClassData";
-import changeClassModule from "./EndPoints/changeClassModule";
-import CreateClass from "./EndPoints/createClass";
+import Student from "./EndPoints/Student";
+import TeacherSchool from "./EndPoints/Student";
+import ClassSchool from "./EndPoints/Class";
 
+const student = new Student()
+const teacher = new TeacherSchool()
+const classSchool = new ClassSchool()
 
+app.get('/estudantes', student.getAll)
 
-app.get('/estudantes', getAllStudents)
+app.get('/estudantes/search', student.search)
 
-app.get('/estudantes/search', searchStudent)
+app.get("/docentes", teacher.getAll );
 
-app.get("/docentes", getAllTeachers );
+app.get('/turma', classSchool.getAll)
 
-app.get('/turma', getAllClass)
+app.get('/turma/active', classSchool.getActive)
 
-app.get('/turma/active', getActiveClass)
+app.get('/turma/data/:turma_id', classSchool.getData)
 
-app.get('/turma/data/:turma_id',getClassData)
+app.put('/estudantes', student.ChangeClass)
 
-app.put('/estudantes', studentChangeClass)
+app.put("/docentes", teacher.ChangeClass)
 
-app.put("/docentes", changeTeacherClass)
+app.put("/turma", classSchool.changeModule)
 
-app.put("/turma", changeClassModule)
+app.post('/estudantes', student.create)
 
-app.post('/estudantes', createStudent)
+app.post("/docentes", teacher.create);
 
-app.post("/docentes", createTeacher);
-
-app.post('/estudantes', createStudent)
-
-app.post('/turma', CreateClass)
+app.post('/turma', classSchool.create)
 
 
 

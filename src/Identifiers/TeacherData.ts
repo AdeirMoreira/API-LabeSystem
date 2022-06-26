@@ -3,7 +3,7 @@ import { IDGenerator } from "./IDGenerator";
 import SpecialityIDs from "./Speciality";
 import Teacher_SpecialityIDs from "./TeacherSpeciality";
 
-export default class Teacher extends IDGenerator {
+export default class TeacherData extends IDGenerator {
     constructor( private SpecialityStings:string[]){
         super(15)
         const SpecialityWithID = new SpecialityIDs(this.SpecialityStings)
@@ -27,7 +27,7 @@ export default class Teacher extends IDGenerator {
         return this.SpecialityWithID
     }
 
-    public Teacher_Speciality= () => {
+    public Teacher_Speciality = () => {
         return this.Teacher_SpecialityWithId
     }
 }

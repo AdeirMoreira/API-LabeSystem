@@ -1,7 +1,7 @@
 import { Docente_Especialidade, Estudante_Hobby } from "../Model/Types";
 import BaseDataBase from "./BaseDataBase";
 
-export default class Docente_EspecialidadeDataBase extends BaseDataBase {
+export default class Teacher_SpecialityDataBase extends BaseDataBase {
     public getAll = async ():Promise<Docente_Especialidade[]> => {
         try {
             return await BaseDataBase.connection('docente_especialidade').select('*')
