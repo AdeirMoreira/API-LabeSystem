@@ -1,3 +1,4 @@
+
 export abstract class Usuario {
     protected turma_id:string = 'K2dRx6'
     constructor (
@@ -75,4 +76,8 @@ export interface Especialidades  {
 
 export interface Hobbys {
     hobbys: hobby[]
+}
+
+export interface ID {
+    ID():string
 }

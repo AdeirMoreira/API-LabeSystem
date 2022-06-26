@@ -32,9 +32,9 @@ export default class TeacherDatabase extends BaseDataBase {
             throw new Error('Erro no banco de dados')
         }
     }
-    public changeClass = async (id: string, turma: string) => {
+    public changeClass = async (id: string, turma: string):Promise<void> => {
         try {
-            return await BaseDataBase.connection("docente")
+            await BaseDataBase.connection("docente")
                 .update({
                     turma_id: turma
                 }).where({

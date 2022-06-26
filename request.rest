@@ -17,10 +17,10 @@ POST  http://localhost:3003/estudantes
 Content-Type: application/json
 
 {
-    "nome": "Jose2",
-    "email": "josey2@email.com",
-    "data_nasc": "20/06/2003",
-    "hobbys": ["teste1","teste2","teste3"]
+    "nome": "Victor Papa2",
+    "email": "vigilante2@patrimonial.com",
+    "data_nasc": "25/02/1985",
+    "hobbys": ["Vigiar2","Proteger2"]
 }
 
 ### Buscar estudante pelo nome
@@ -40,10 +40,10 @@ POST http://localhost:3003/docentes
 Content-Type: application/json
 
 {  
-    "nome": "janayla",
-    "email": "jana@labenu.com",
-    "data_nasc": "18/10/2022",
-    "especialidades": ["js","css","react"]
+    "nome": "Murilão da Massa2",
+    "email": "Muri@labenu.com2",
+    "data_nasc": "05/03/1990",
+    "especialidades": ["JS2","CSS2","React2"]
 
 }
 
