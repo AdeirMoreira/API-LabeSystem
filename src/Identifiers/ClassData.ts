@@ -1,7 +1,7 @@
 import { IDGenerator } from "./IDGenerator"
 
 
-export default class Class extends IDGenerator {
+export default class ClassData extends IDGenerator {
     constructor() {
         super(15)
     }
