@@ -4,7 +4,7 @@ import TeacherDatabase from "../Data/TeachersDatabase"
 
 
 
-export default async function changeClass(req: Request, res: Response): Promise<void> {
+export default async function changeTeacherClass(req: Request, res: Response): Promise<void> {
     const statusCode = 201
     let errorCode: number = 400
 

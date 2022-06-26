@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import TurmaDataBase from "../Data/turmaDataBase";
+import TurmaDataBase from "../Data/ClassDataBase";
 
 
-export default async function getDataTurma(req:Request, res:Response) {
+export default async function getClassData(req:Request, res:Response) {
     let errorCode = 400
     const id = req.params.turma_id as string
     
@@ -12,7 +12,7 @@ export default async function getDataTurma(req:Request, res:Response) {
             throw new Error("Informe o id da turma!");
         }
         const TurmaIdDB = new TurmaDataBase()
-        const result = await TurmaIdDB.getDataTurma(id) 
+        const result = await TurmaIdDB.getData(id) 
         res.status(200).send(result)
         
     } catch (error:any) {

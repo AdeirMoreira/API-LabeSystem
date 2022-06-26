@@ -1,4 +1,4 @@
-import idGenerator from "./GeradorID";
+import idGenerator from "../Identifiers/IDGenerator";
 import { hobby, Hobbys, Usuario } from "./Types";
 
 export class Estudantes extends Usuario implements Hobbys{

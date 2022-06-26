@@ -2,8 +2,8 @@ import { Turmas } from "../Model/Turmas";
 import { Turma } from "../Model/Types";
 import BaseDataBase from "./BaseDataBase";
 
-export default class TurmaDataBase extends BaseDataBase {
-    public getAllTurmas = async ():Promise<Turma[]> =>{
+export default class ClassDataBase extends BaseDataBase {
+    public getAll = async ():Promise<Turma[]> =>{
         try {
             return await BaseDataBase.connection("turma").select("*")
 
@@ -19,7 +19,7 @@ export default class TurmaDataBase extends BaseDataBase {
         }
     }
 
-    public createTurma = async (turma:Turmas):Promise<void> =>{
+    public create = async (turma:Turmas):Promise<void> =>{
         try {
         await BaseDataBase.connection("turma")
             .insert({
@@ -33,7 +33,7 @@ export default class TurmaDataBase extends BaseDataBase {
         } 
     }
 
-    public changeTurma = async (id:string, modulo:number) =>{
+    public change = async (id:string, modulo:number) =>{
         console.log(id, modulo)
         try {
             await BaseDataBase.connection("turma")
@@ -49,7 +49,7 @@ export default class TurmaDataBase extends BaseDataBase {
         }
     }
 
-    public getDataTurma = async (id:string) =>{
+    public getData = async (id:string) =>{
         
         try {
             return await BaseDataBase.connection('turma') 

@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import TurmaDataBase from "../Data/turmaDataBase";
+import TurmaDataBase from "../Data/ClassDataBase";
 
 
-export default async function getActiveTurma(req:Request, res:Response):Promise<void> {
+export default async function getActiveClass(req:Request, res:Response):Promise<void> {
     const statusCode = 200
     let errorCode: number = 400
 
