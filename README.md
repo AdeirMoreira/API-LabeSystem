@@ -1,36 +1,41 @@
-## LabenuSystem:
+<p>
+<a href="#sobre">Sobre</a> |
+<a href="#tecnologias">Tecnologias</a> |
+<a href="#link">Link da API</a> |
+<a href="#documentação">Documentação</a> |
+<a href="#features">Features</a> |
+<a href="#desenvolvedores">Desenvolvedores</a>
+</p>
 
-Você estuda na Labenu_ há tanto tempo que já parecem anos, não é? Então, hoje, vamos pedir para criar um sistema que represente o básico da nossa organização. 
+<h1 id="sobre">📕 LabeSystem</h1>
 
-Ele deve possuir, ao menos, as 3 entidades importantes:
+LabeSystem é uma API que simula o sistema de uma escola, como endpoints para cadastrar turnas professores e alunos. Cada professor tem especialidades e cada aluno tem hobbs. API foi desenvolvida utilizado as tecnologias **TYPESCRIPT, NODE.JS, EXPRESS.JS, MYSQL** como banco de dados e **JEST** para testes unitários. Além disso, o projeto foi estruturado utilizando **PROGRAMAÇÃO ORIENTADA A OBJETOS(POO)** e princípios **S.O.L.I.D.** 
 
-1. Estudantes 
+ <h2 id="tecnologias">🛠 Tecnologias</h2>
 
-    Representa estudantes da nossa instituição. Eles devem possuir: id, nome, email, data de nascimento e os principais hobbies dele. 
+- [TypeScript](https://www.typescriptlang.org/)
+- [NodeJS](https://nodejs.org/en/docs/)
+- [Jest](https://jestjs.io/pt-BR/docs/api)
+- [MySql](https://dev.mysql.com/doc/)
 
-2. Docente
+<h2 id="link">🔗 Link base da API</h2>
 
-    Representa docentes da nossa instituição. Eles devem possuir: id, nome, email, data de nascimento e todas as especialidades dele. Há 7 especialidades: React, Redux, CSS, Testes, Typescript, Programação Orientada a Objetos e Backend
+### - 
 
-3. Turma
+<h2 id="documentação">📃 Documentação do Postman</h2>
+Na documentação você encontra as instruções de como usar e o que cada endPoint espera receber. Você também pode clicar em "Run in Postman" para rodar os endpoint no seu postman.
 
-    Toda turma é composta das seguintes características: id, nome, data de início, data de término, lista de professores responsáveis, uma lista de alunos e módulo atual em que a turma está.
+### - [Postman]()
 
-    O módulo pode assumir os valores de 1 a 7 ou `undefined`, indicando que as aulas dessa turma ainda não começaram. Para esse exercício, vamos considerar que existam dois tipos de turma: integral ou noturna. Há uma restrição para o nome das turmas noturnas: tem que terminar com `-na-night`.
+<h2 id="features">✔️ Features</h2>
 
-As funcionalidades básicas são:
 
-→ Criar estudante;
 
-→ Criar docente;
 
-→ Criar turma;
+<h2 id="desenvolvedores">👨‍💻 Desenvolvedor</h2>
+<table>         
+<td><a href="https://github.com/future4code/silveira-Adeir-Maia"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/98994187?v=4" width="100px;" alt="Imagem profile Adeir Moreira desenvolvedor"/><br /><sub><b>Adeir Moreira</b></sub></a><br /> 
 
-→ Adicionar estudante na turma;
+</table>
 
-→ Adicionar docente na turma;
-
-→ Pegar a idade de algum estudante a partir do id
-
-Documentação da API 
-https://documenter.getpostman.com/view/20352107/UzBqqRL9
+<a href="#voltar">Voltar para o topo ⬆️</a>
